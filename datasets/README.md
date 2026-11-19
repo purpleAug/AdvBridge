@@ -18,14 +18,3 @@ User IDs must have one unambiguous numeric spelling. Item IDs may be arbitrary n
 Blank lines and full-line `#` comments are ignored. Retained ratings are converted to 1.
 Social edges are directed; their weight is 1, matching the original two-column input.
 
-The Lastfm and Yelp templates retain ratings >= 1; Douban retains ratings >= 4.
-Keep the original row order: cross-validation assigns retained interaction row `i`
-to test fold `i % folds + 1`. Do not pre-shuffle a dataset to reproduce that protocol.
-
-The reference user counts and mean degrees in the configurations reproduce the
-source method's injection/budget constants, rather than recomputing statistics
-after filtering. For a new dataset, specify these statistics deliberately.
-
-Real datasets are not bundled. Obtain them from their original providers and
-apply your documented preprocessing. The synthetic fixture in `examples/toy`
-is supplied only to exercise the code and does not represent benchmark results.
