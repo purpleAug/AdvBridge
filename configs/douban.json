@@ -1,0 +1,52 @@
+{
+  "data": {
+    "name": "douban",
+    "ratings": "../datasets/douban/ratings.txt",
+    "social": "../datasets/douban/trusts.txt",
+    "reference_users": 2848,
+    "mean_item_degree": 314,
+    "mean_social_degree": 13,
+    "rating_threshold": 4,
+    "folds": 5,
+    "normalize_ssl": true
+  },
+  "target": {
+    "user": "117",
+    "item": "261"
+  },
+  "training": {
+    "embedding_dim": 64,
+    "layers": 2,
+    "epochs": 30,
+    "batch_size": 3000,
+    "learning_rate": 0.001,
+    "regularization": 0.001,
+    "self_supervision_weight": 0.01,
+    "diffusion_weight": 0.01,
+    "diffusion_steps": 100,
+    "seed": 1334,
+    "top_n": 10,
+    "use_gpu": false,
+    "threads": 1
+  },
+  "attack": {
+    "injection_ratio": 0.01,
+    "item_budget_scale": 1,
+    "social_budget_scale": 1,
+    "rounds": 10,
+    "shape_steps": 200,
+    "signal_steps": 300,
+    "learning_rate": 0.05,
+    "lambda_bridge": 1,
+    "lambda_fidelity": 0.4,
+    "lambda_concentration": 0.6,
+    "direct_anchor_probability": 0.5,
+    "social_candidate_factor": 50,
+    "item_candidate_factor": 50,
+    "social_weight": 0.1,
+    "rating_anchor_weight": 0.5,
+    "social_anchor_weight": 0.5,
+    "seed": 1334,
+    "device": "cpu"
+  }
+}

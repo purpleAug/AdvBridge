@@ -1,0 +1,52 @@
+{
+  "data": {
+    "name": "toy",
+    "ratings": "../examples/toy/ratings.tsv",
+    "social": "../examples/toy/trusts.tsv",
+    "reference_users": 12,
+    "mean_item_degree": 4,
+    "mean_social_degree": 3,
+    "rating_threshold": 1,
+    "folds": 5,
+    "normalize_ssl": false
+  },
+  "target": {
+    "user": "1",
+    "item": "20"
+  },
+  "training": {
+    "embedding_dim": 8,
+    "layers": 2,
+    "epochs": 2,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "regularization": 0.001,
+    "self_supervision_weight": 0.01,
+    "diffusion_weight": 0.01,
+    "diffusion_steps": 100,
+    "seed": 1334,
+    "top_n": 5,
+    "use_gpu": false,
+    "threads": 1
+  },
+  "attack": {
+    "injection_ratio": 0.17,
+    "item_budget_scale": 1,
+    "social_budget_scale": 1,
+    "rounds": 1,
+    "shape_steps": 2,
+    "signal_steps": 2,
+    "learning_rate": 0.05,
+    "lambda_bridge": 1,
+    "lambda_fidelity": 0.4,
+    "lambda_concentration": 0.6,
+    "direct_anchor_probability": 0.5,
+    "social_candidate_factor": 3,
+    "item_candidate_factor": 3,
+    "social_weight": 0.1,
+    "rating_anchor_weight": 0.5,
+    "social_anchor_weight": 0.5,
+    "seed": 1334,
+    "device": "cpu"
+  }
+}
